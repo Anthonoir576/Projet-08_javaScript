@@ -8,6 +8,20 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  color: #09fbba;
+  font-weight: 100;
+}
+.main h1, .main h2 {
+  margin-top: 2em;
+  margin-bottom: 4em;
+  border-bottom: 1px solid #09fbba;
+  border-top: 1px solid #09fbba;
+  padding: 10px 0;
+  text-align: center;
+  color: #09fbbaa1;
+}
+.main h3 {
+  color: #09fbbaa1;
 }
 .main p {
   text-align: justify;
@@ -19,7 +33,7 @@ body {
   overflow: hidden;
 }
 .main .top .box-1 {
-  background: #77bcfd5b;
+  background: #333;
   flex: 0 0 50%;
   position: relative;
 }
@@ -45,7 +59,7 @@ body {
   z-index: 10;
 }
 .main .bottom {
-  background: #c4ada042;
+  background: #333;
   flex: 1;
   overflow: hidden;
 }
