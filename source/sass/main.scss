@@ -1,21 +1,95 @@
-// ######### RESET #################
-* {
 
+body {
+  
     padding: 0;
     margin: 0;
-
-    box-sizing: border-box;
+    font-family: 'Encode Sans SC', sans-serif;
 
 }
 
-// ########## CSS ##################
-html,
-body {
+.main {
 
-    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 
-    background: whitesmoke;
+    & p {
 
-    font-family: 'Encode Sans SC', sans-serif;
+        text-align: justify;
 
-} 
+    }
+
+    & .top {
+
+        display: flex;
+        flex: 0 0 60%;
+        flex-direction: row;
+        overflow: hidden;
+
+        & .box-1 {
+
+            background: #77bcfd5b;
+            flex: 0 0 50%;
+            position: relative;
+
+            & .box-1-container {
+
+                max-height: 100%;
+                overflow: auto;
+                padding: 0.5rem 2rem;
+
+            }
+
+        }
+
+        & .drag-x {
+
+            background: linear-gradient(360deg, gray 50%, white 100%);
+            cursor: col-resize;
+            flex: 0 0 8px;
+          
+        }
+
+        & .box-2 {
+
+            background: url("../image/pix.jpg") center/cover;
+            flex: 1;
+
+        }
+
+
+    }
+
+    & .drag-y {
+
+        background: linear-gradient(90deg, gray 55%, white 100%);
+        cursor: row-resize;
+        caret-color: auto;
+        flex: 0 0 8px;
+        z-index: 10;
+
+    }
+
+    & .bottom {
+
+        background: #c4ada042;
+        flex: 1;
+        overflow: hidden;
+
+        & .bottom-container {
+
+            max-height: 100%;
+            overflow: auto;
+            display: flex;
+
+            & p {
+
+                padding: 3.5rem;
+
+            }
+
+        }
+
+    }
+
+}
