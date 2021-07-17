@@ -33,7 +33,7 @@ body {
   overflow: hidden;
 }
 .main .top .box-1 {
-  background: #333;
+  background: rgba(51, 51, 51, 0.877);
   flex: 0 0 50%;
   position: relative;
 }
@@ -59,7 +59,7 @@ body {
   z-index: 10;
 }
 .main .bottom {
-  background: #333;
+  background: rgba(51, 51, 51, 0.87);
   flex: 1;
   overflow: hidden;
 }
