@@ -4,29 +4,29 @@ const main = document.querySelector('.main');
 // lorsque je click sur dragX, ca influence sur le flex 
 document.addEventListener('mousedown', (e) => {
 
-    if (e.target.className == 'drag-x') {
+    if (e.target.className == 'drag-x' && (window.event != null)) {
 
         let box1 = document.querySelector('.box-1');
 
         document.onmousemove = (e) => {
-
+            e == null ? e = window.event : '';        
             box1.style.flex = "0 0" + e.clientX / (main.clientWidth / 100) + "%";
 
         }
 
-        stopBug();
+        stopBug(e);
 
-    } else if (e.target.className == 'drag-y') {
+    } else if (e.target.className == 'drag-y' && (window.event != null)) {
 
         let top = document.querySelector('.top');
 
         document.onmousemove = (e) => {
-
+            e == null ? e = window.event : '';
             top.style.flex = "0 0" + e.clientY / (main.clientHeight / 100) + "%";
 
         } 
         
-        stopBug();
+        stopBug(e);
 
     }
 
